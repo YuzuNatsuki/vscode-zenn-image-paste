@@ -1,0 +1,46 @@
+{
+  "name": "vscode-zenn-image-paste",
+  "displayName": "Zenn Image Paste",
+  "description": "Paste clipboard images into Zenn articles and books as WebP",
+  "version": "0.0.1",
+  "publisher": "local",
+  "repository": { "type": "git", "url": "https://github.com/local/vscode-zenn-image-paste" },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "icon": "images/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-zenn-image-paste.pasteImage",
+        "title": "Zenn: Paste Image from Clipboard"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-zenn-image-paste.pasteImage",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v",
+        "when": "editorTextFocus && editorLangId == markdown"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.42",
+    "@types/vscode": "1.80.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.4.0"
+  }
+}
