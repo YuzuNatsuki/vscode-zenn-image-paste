@@ -3,8 +3,23 @@
   "displayName": "Zenn Image Paste",
   "description": "Paste clipboard images into Zenn articles and books as WebP",
   "version": "0.0.1",
-  "publisher": "local",
-  "repository": { "type": "git", "url": "https://github.com/local/vscode-zenn-image-paste" },
+  "publisher": "YuzuNatsuki",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuzuNatsuki/vscode-zenn-image-paste"
+  },
+  "bugs": {
+    "url": "https://github.com/YuzuNatsuki/vscode-zenn-image-paste/issues"
+  },
+  "homepage": "https://github.com/YuzuNatsuki/vscode-zenn-image-paste#readme",
+  "keywords": [
+    "zenn",
+    "markdown",
+    "image",
+    "paste",
+    "clipboard"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -35,7 +50,8 @@
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "package": "vsce package --allow-missing-repository"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^20.19.42",
