@@ -93,30 +93,3 @@ cursor --install-extension vscode-zenn-image-paste-0.0.1.vsix
 ```
 
 > `cursor` コマンドが使えない場合は、Cursor のコマンドパレット（`Cmd+Shift+P`）から「Shell Command: Install 'cursor' command in PATH」を実行してください。
-
-## Marketplace への公開
-
-GitHub Actions で VS Code Marketplace へ自動公開します。`v*` タグを push すると `publish` ワークフローが実行されます。
-
-### 初回セットアップ
-
-1. [Visual Studio Marketplace](https://marketplace.visualstudio.com/manage) で Publisher を作成する  
-   - Publisher ID は `package.json` の `publisher`（`YuzuNatsuki`）と一致させる
-2. [Azure DevOps](https://dev.azure.com/) で Personal Access Token (PAT) を作成する  
-   - Scope: **Marketplace** → **Manage**
-3. GitHub リポジトリの **Settings → Secrets and variables → Actions** に `VSCE_PAT` という名前で PAT を登録する
-
-### リリース手順
-
-1. `package.json` の `version` を更新する
-2. 変更を main に push する
-3. バージョンタグを push する
-
-```bash
-git tag v0.0.2
-git push origin v0.0.2
-```
-
-タグ（例: `v0.0.2`）と `package.json` の `version`（例: `0.0.2`）が一致している必要があります。
-
-手動で公開する場合は、GitHub の **Actions → Publish to VS Code Marketplace → Run workflow** からも実行できます。
