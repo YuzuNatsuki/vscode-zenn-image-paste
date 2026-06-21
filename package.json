@@ -2,7 +2,7 @@
   "name": "vscode-zenn-image-paste",
   "displayName": "Zenn Image Paste",
   "description": "Paste clipboard images into Zenn articles and books as WebP",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "YuzuNatsuki",
   "license": "Apache-2.0",
   "repository": {
